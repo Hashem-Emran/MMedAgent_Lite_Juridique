@@ -1,0 +1,34 @@
+USE_HYBRID_STRATIFICATION: false
+REMOVE_TASHKEEL: true
+NORMALIZE_TA_MARBUTA: false
+DEDUP_QUESTIONS: true
+MAX_CONTEXT_CHARS: 30000
+MIN_QUESTION_CHARS: 10
+LANG_DETECT_THRESHOLD: 0.30
+RANDOM_SEED: 42
+
+tokenizer_name: "Qwen/Qwen2-0.5B"
+
+stratification_weights:
+  f1_ans_len: 0.20
+  f2_ctx_len: 0.15
+  f3_lexical_overlap: 0.25
+  f4_has_negation: 0.10
+  f5_has_quantifier: 0.05
+  f6_cross_refs: 0.10
+  f7_question_type: 0.15
+
+train_test_split: 0.80
+
+paths:
+  archive_qa: "archive/qa.csv"
+  archive_docs: "archive/train_with_file_content.csv"
+  raw_qa: "data/raw/qa.csv"
+  raw_docs: "data/raw/documents.csv"
+  interim_fr_qa: "data/interim/qa_fr.parquet"
+  interim_fr_docs: "data/interim/docs_fr.parquet"
+  interim_ar_qa: "data/interim/qa_ar.parquet"
+  interim_ar_docs: "data/interim/docs_ar.parquet"
+  interim_splits: "data/interim/splits.json"
+  processed: "data/jurida_processed"
+  figures: "figures"

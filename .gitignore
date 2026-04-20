@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ipynb_checkpoints/
+data/raw/
+data/interim/
+data/jurida_processed/
+archive/
+MMedAgent-RL.txt
+figures/*.png
+report/*.pdf
+.venv/
+venv/
+.env
