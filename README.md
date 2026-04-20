@@ -13,7 +13,7 @@ Le projet MMedAgent-Lite original couvre le domaine médical. Ce module transpos
 ## Ce que fait le pipeline
 
 ```
-archive/*.csv
+dataset/*.csv
     │
     ▼  download_jur.py         → data/raw/
     ▼  preprocess_jur_fr.py    → data/interim/qa_fr.parquet   (mojibake fix, clean, tokenize)
